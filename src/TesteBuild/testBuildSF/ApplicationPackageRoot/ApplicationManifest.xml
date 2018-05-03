@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ApplicationManifest ApplicationTypeName="testBuildSFType"
-                     ApplicationTypeVersion="1.0.0"
+                     ApplicationTypeVersion="2.0.2"
                      xmlns="http://schemas.microsoft.com/2011/01/fabric"
                      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Parameters>
-    <Parameter Name="SampleWebApp_InstanceCount" DefaultValue="-1" />
+    <Parameter Name="SampleWebApp_InstanceCount" DefaultValue="3" />
   </Parameters>
   <!-- Import the ServiceManifest from the ServicePackage. The ServiceManifestName and ServiceManifestVersion 
        should match the Name and Version attributes of the ServiceManifest element defined in the 
        ServiceManifest.xml file. -->
   <ServiceManifestImport>
-    <ServiceManifestRef ServiceManifestName="SampleWebAppPkg" ServiceManifestVersion="1.0.0" />
+    <ServiceManifestRef ServiceManifestName="SampleWebAppPkg" ServiceManifestVersion="2.0.2" />
     <ConfigOverrides />
       <Policies>
         <ContainerHostPolicies CodePackageRef="Code">
